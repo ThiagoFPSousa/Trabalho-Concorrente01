@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPanePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EscolhaDirecao">
+  <children>
+    <ImageView fx:id="background" fitHeight="445.0" fitWidth="788.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../img/Background.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="trilho" fitHeight="445.0" fitWidth="120.0" layoutX="38.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../img/Trilho.png" />
+      </image>
+    </ImageView>
+    <Label fx:id="brinqueDeTrem" layoutX="272.0" layoutY="43.0" text="BRINQUE DE TREM">
+      <font>
+        <Font name="Gotham-Bold" size="25.0" />
+      </font>
+      <effect>
+        <Blend />
+      </effect>
+    </Label>
+    <Label fx:id="direcaoDePartida" layoutX="240.0" layoutY="160.0" text="DIREÇÃO DE PRATIDA" visible="false">
+      <font>
+        <Font name="Gotham-Bold" size="14.0" />
+      </font>
+      <effect>
+        <Blend />
+      </effect>
+    </Label>
+    <AnchorPane fx:id="anchorPaneDirecao" layoutX="222.0" layoutY="196.0" prefHeight="186.0" prefWidth="200.0">
+      <children>
+        <ImageView fx:id="backgroundDirecao" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../img/Background_Direcao.png" />
+          </image>
+          <effect>
+            <DropShadow />
+          </effect>
+        </ImageView>
+        <RadioButton fx:id="btnSuperior" focusTraversable="false" layoutX="59.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickbtnSuperior" prefHeight="20.0" prefWidth="188.0" text="Superior" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="2.0">
+          <tooltip>
+            <Tooltip text="Escolher Superior" />
+          </tooltip>
+          <toggleGroup>
+            <ToggleGroup fx:id="toggleGroup" />
+          </toggleGroup>
+          <font>
+            <Font name="Gotham-Bold" size="15.0" />
+          </font>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+        </RadioButton>
+        <RadioButton fx:id="btnInferior" focusTraversable="false" layoutX="55.0" layoutY="57.0" mnemonicParsing="false" onAction="#onClickbtnInferior" prefHeight="21.0" prefWidth="188.0" text="Inferior" toggleGroup="$toggleGroup" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="2.0">
+          <tooltip>
+            <Tooltip text="Escolher Inferior" />
+          </tooltip>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+          <font>
+            <Font name="Gotham-Bold" size="15.0" />
+          </font>
+        </RadioButton>
+        <RadioButton fx:id="btnAlternadoI" focusTraversable="false" layoutX="46.0" layoutY="95.0" mnemonicParsing="false" onAction="#onClickbtnAlternadoI" prefHeight="20.0" prefWidth="188.0" text="Alternado I" toggleGroup="$toggleGroup" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="2.0">
+          <tooltip>
+            <Tooltip text="Escolher Alternado I" />
+          </tooltip>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+          <font>
+            <Font name="Gotham-Bold" size="15.0" />
+          </font>
+        </RadioButton>
+        <RadioButton fx:id="btnAlternadoII" focusTraversable="false" layoutX="44.0" layoutY="136.0" mnemonicParsing="false" onAction="#onClickbtnAlternadoII" prefHeight="20.0" prefWidth="188.0" text="Alternado II" toggleGroup="$toggleGroup" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="2.0">
+          <tooltip>
+            <Tooltip text="Escolher Alternado II" />
+          </tooltip>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+          <font>
+            <Font name="Gotham-Bold" size="15.0" />
+          </font>
+        </RadioButton>
+      </children>
+      <effect>
+        <DropShadow />
+      </effect>
+    </AnchorPane>
+    <Button fx:id="btnIniciar" layoutX="290.0" layoutY="395.0" mnemonicParsing="false" onAction="#onClickbtnIniciar" style="-fx-background-color: #9C6619;" text="Iniciar">
+      <font>
+        <Font name="Gotham-Bold" size="15.0" />
+      </font>
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor>
+      <effect>
+        <DropShadow />
+      </effect>
+    </Button>
+    <ImageView fx:id="trem1" fitHeight="54.0" fitWidth="48.0" layoutX="21.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../img/TremS.png" />
+      </image>
+      <effect>
+        <DropShadow />
+      </effect>
+    </ImageView>
+    <ImageView fx:id="trem2" fitHeight="54.0" fitWidth="48.0" layoutX="122.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../img/TremS.png" />
+      </image>
+      <effect>
+        <DropShadow />
+      </effect>
+    </ImageView>
+    <Button fx:id="btnComecar" layoutX="346.0" layoutY="87.0" mnemonicParsing="false" onAction="#clickOnComecar" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: #9C6619;" text="COMEÇAR">
+      <font>
+        <Font name="Gotham-Bold" size="13.0" />
+      </font>
+      <effect>
+        <DropShadow />
+      </effect>
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor>
+    </Button>
+    <AnchorPane fx:id="anchorPaneVelocidade" layoutX="153.0" layoutY="233.0" prefHeight="200.0" prefWidth="269.0" visible="false">
+      <children>
+        <Label fx:id="velocidadeTrem1" layoutX="74.0" layoutY="14.0" text="Velocidade Trem 1">
+          <font>
+            <Font name="Gotham-BoldItalic" size="15.0" />
+          </font>
+          <effect>
+            <Blend />
+          </effect>
+        </Label>
+        <RadioButton fx:id="t1Velocidade0" layoutY="38.0" mnemonicParsing="false" onAction="#clickOnT1Velocidade0" text="0%" AnchorPane.topAnchor="38.0">
+          <toggleGroup>
+            <ToggleGroup fx:id="toggleGroupv1" />
+          </toggleGroup>
+          <font>
+            <Font name="Gotham-Bold" size="15.0" />
+          </font>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+        </RadioButton>
+        <RadioButton fx:id="t1Velocidade25" layoutX="52.0" layoutY="38.0" mnemonicParsing="false" onAction="#clickOnT1Velocidade25" text="25%" toggleGroup="$toggleGroupv1" AnchorPane.topAnchor="38.0">
+          <font>
+            <Font name="Gotham-Bold" size="15.0" />
+          </font>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+        </RadioButton>
+        <RadioButton fx:id="t1Velocidade50" layoutX="113.0" layoutY="38.0" mnemonicParsing="false" onAction="#clickOnT1Velocidade50" text="50%" toggleGroup="$toggleGroupv1">
+          <font>
+            <Font name="Gotham-Bold" size="15.0" />
+          </font>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+        </RadioButton>
+        <RadioButton fx:id="t1Velocidade75" layoutX="173.0" layoutY="38.0" mnemonicParsing="false" onAction="#clickOnT1Velocidade75" text="75%" toggleGroup="$toggleGroupv1" AnchorPane.topAnchor="38.0">
+          <font>
+            <Font name="Gotham-Bold" size="15.0" />
+          </font>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+        </RadioButton>
+        <RadioButton fx:id="t1Velocidade100" layoutX="236.0" layoutY="38.0" mnemonicParsing="false" onAction="#clickOnT1Velocidade100" prefHeight="20.0" prefWidth="79.0" text="100%" toggleGroup="$toggleGroupv1" AnchorPane.topAnchor="38.0">
+          <font>
+            <Font name="Gotham-Bold" size="15.0" />
+          </font>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+        </RadioButton>
+        <Label fx:id="velocidadeTrem2" layoutX="74.0" layoutY="90.0" text="Velocidade Trem 2">
+          <font>
+            <Font name="Gotham-BoldItalic" size="15.0" />
+          </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+      <RadioButton fx:id="t2Velocidade0" layoutY="116.0" mnemonicParsing="false" onAction="#clickOnT2Velocidade0" text="0%" AnchorPane.topAnchor="116.0">
+        <toggleGroup>
+          <ToggleGroup fx:id="toggleGroupv2" />
+        </toggleGroup>
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+      </RadioButton>
+      <RadioButton fx:id="t2Velocidade25" layoutX="52.0" layoutY="116.0" mnemonicParsing="false" onAction="#clickOnT2Velocidade25" text="25%" toggleGroup="$toggleGroupv2" AnchorPane.topAnchor="116.0">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+      </RadioButton>
+      <RadioButton fx:id="t2Velocidade50" layoutX="113.0" layoutY="116.0" mnemonicParsing="false" onAction="#clickOnT2Velocidade50" text="50%" toggleGroup="$toggleGroupv2" AnchorPane.topAnchor="116.0">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+      </RadioButton>
+      <RadioButton fx:id="t2Velocidade75" layoutX="173.0" layoutY="116.0" mnemonicParsing="false" onAction="#clickOnT2Velocidade75" text="75%" toggleGroup="$toggleGroupv2">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+      </RadioButton>
+      <RadioButton fx:id="t2Velocidade100" layoutX="236.0" layoutY="116.0" mnemonicParsing="false" onAction="#clickOnT2Velocidade100" prefHeight="21.0" prefWidth="79.0" text="100%" toggleGroup="$toggleGroupv2">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+      </RadioButton>
+      <Button fx:id="btnResetar" layoutX="106.0" layoutY="154.0" mnemonicParsing="false" onAction="#clickOnBtnResetar" style="-fx-background-color: #9C6619;" text="Resetar" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="154.0">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <opaqueInsets>
+          <Insets />
+        </opaqueInsets>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+        <effect>
+          <DropShadow />
+        </effect>
+      </Button>
+    </children>
+  </AnchorPane>
+  <AnchorPane fx:id="anchorPaneStatusTrens" layoutX="158.0" layoutY="75.0" prefHeight="118.0" prefWidth="188.0">
+    <children>
+      <Label fx:id="status0Trem1" layoutX="23.0" layoutY="28.0" text="TREM 1 = PARADO">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+      <Label fx:id="status25Trem1" layoutX="23.0" layoutY="28.0" text="TREM 1 = 25km/h">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+      <Label fx:id="status50Trem1" layoutX="23.0" layoutY="28.0" text="TREM 1 = 50km/h">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+      <Label fx:id="status75Trem1" layoutX="23.0" layoutY="28.0" text="TREM 1 = 75km/h">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+      <Label fx:id="status100Trem1" layoutX="23.0" layoutY="28.0" text="TREM 1 = 100km/h">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+      <Label fx:id="status0Trem2" layoutX="23.0" layoutY="59.0" text="TREM 2 = PARADO">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+      <Label fx:id="status25Trem2" layoutX="23.0" layoutY="59.0" text="TREM 2 = 25km/h">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+      <Label fx:id="status50Trem2" layoutX="23.0" layoutY="59.0" text="TREM 2 = 50km/h">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+      <Label fx:id="status75Trem2" layoutX="23.0" layoutY="59.0" text="TREM 2 = 75km/h">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+      <Label fx:id="status100Trem2" layoutX="23.0" layoutY="59.0" text="TREM 2 = 100km/h">
+        <font>
+          <Font name="Gotham-Bold" size="15.0" />
+        </font>
+        <effect>
+          <Blend />
+        </effect>
+      </Label>
+    </children>
+  </AnchorPane>
+</children>
+</AnchorPane>
